@@ -11,6 +11,7 @@ Comes with some example images!
 ## Setting up the example
 To start out, create a local script in StarterPlayerScripts and a regular script in ServerScriptService. Put the code from exampleScripts/client into the local script and the code from exampleScripts/server into the regular script.
 Then, copy LargeImage into a modular script under ServerScriptService
+Now all you need is a remote event named "SwitchImage" in ReplicatedStorage and a part named "Screen" in the workspace
 After that, you can copy whatever images you want from exampleImages/ into the LargeImage modular script (To do this, you need to create a modular script in ServerScriptService, and then drag it under the modular script.)
 If you need to generate your own images, use the Image2Vortex.py script (Requires pillow!)
 
