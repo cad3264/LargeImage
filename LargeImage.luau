@@ -1,3 +1,5 @@
+-- This is a MODULE script.
+
 local workspace = game:GetService("Workspace")
 
 local images = script:GetChildren()
