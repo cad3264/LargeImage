@@ -1,6 +1,6 @@
 # LargeImage [BETA]
 Display large images within Vortex!
-This is NOT complete with compression nor optimizations, This is very basic.
+This is NOT complete with compression nor optimizations at the moment, this is a very basic module.
 
 <img src="https://github.com/cad3264/LargeImage/blob/main/banner.png?raw=true">
 
