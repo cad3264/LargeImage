@@ -1,5 +1,6 @@
-# LargeImage
+# LargeImage [BETA]
 Display large images within Vortex!
+This is NOT complete with compression nor optimizations, This is very basic.
 
 <img src="https://github.com/cad3264/LargeImage/blob/main/banner.png?raw=true">
 
