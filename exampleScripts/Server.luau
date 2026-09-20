@@ -1,3 +1,5 @@
+-- Make sure this is a regular script in ServerScriptService, with LargeImage as a module script in ServerScriptServer, and one or more images under LargeImage
+
 local largeImageScript = script.Parent:WaitForChild("LargeImage")
 local largeImage = require(largeImageScript)
 
