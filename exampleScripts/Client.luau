@@ -1,3 +1,5 @@
+-- Make this a LOCAL script in "StarterPlayerScripts"
+
 local userInput = game:GetService("UserInputService")
 local replicatedStorage = game:GetService("ReplicatedStorage")
 local workspace = game:GetService("Workspace")
