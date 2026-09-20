@@ -1,5 +1,3 @@
--- This is a MODULE script.
-
 local workspace = game:GetService("Workspace")
 
 local images = script:GetChildren()
@@ -14,7 +12,8 @@ function largeImageAPI.loadImage(image,screen)
 	local pixelGroup = Instance.new("Model")
 	pixelGroup.Name = "Pixels"
 	pixelGroup.Parent = workspace
-	local screenPos = screen.Position
+	local screenCFrame = screen.CFrame
+	local screenRotation = screen.Rotation
 	
 	local getPixelColor = string.gmatch(imageData,"(%d+_%d+_%d+)%+?")
 	local pixels = {}
@@ -32,7 +31,8 @@ function largeImageAPI.loadImage(image,screen)
 			newPixel.CanCollide = false
 			local pixelSize = Vector3.new(screen.Size.X/width,screen.Size.Y/height,0.05)
 			newPixel.Size = pixelSize
-        	newPixel.Position = Vector3.new((screenPos.X-width*pixelSize.X/2)+(x*pixelSize.X)-pixelSize.X/2,(screenPos.Y+height*pixelSize.Y/2)-(y*pixelSize.Y)+pixelSize.Y/2,screenPos.Z+screen.Size.Z/2+0.025)
+        	newPixel.Position = screenCFrame * Vector3.new((width*pixelSize.X/-2)+(x*pixelSize.X)-pixelSize.X/2,(height*pixelSize.Y/2)-(y*pixelSize.Y)+pixelSize.Y/2,screen.Size.Z/2+0.025)
+        	newPixel.Rotation = screenRotation
         	newPixel.Color = pixelColor
         	newPixel.Parent = pixelGroup
         	
