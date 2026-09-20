@@ -6,8 +6,10 @@ root = tk.Tk()
 root.withdraw()
 
 file_path = filedialog.askopenfilename(title="What image to convert?")
+assert file_path
 
-save_file_path = filedialog.askopenfilename(title="Where to save the file?")
+savefile = filedialog.asksaveasfile(title="Where to save the file?",defaultextension=".luau",filetypes=[("Vortex scripts",".luau")])
+assert savefile
 
 img = Image.open(file_path).convert("RGB")
 
@@ -25,6 +27,5 @@ for x in range(w):
 
 print(final)
 
-savefile = open(save_file_path,"w")
 savefile.write("return {\"" + final + "\"," + str(w) + "," + str(h) + "}")
 savefile.close()
