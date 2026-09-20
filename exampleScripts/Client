@@ -1,0 +1,13 @@
+local userInput = game:GetService("UserInputService")
+local replicatedStorage = game:GetService("ReplicatedStorage")
+local workspace = game:GetService("Workspace")
+
+local switchImageEvent = replicatedStorage:WaitForChild("SwitchImage")
+local screen = workspace:WaitForChild("Screen")
+
+userInput.InputBegan:Connect(function(input)
+    if input.KeyCode == Enum.KeyCode.R then
+        switchImageEvent:FireServer()
+    end
+    
+end)
